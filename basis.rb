@@ -150,3 +150,77 @@ def get_day_name(day)
 
     return day_name
 end
+
+# WHILE LOOPS
+index = 1
+while index <= 5
+    puts index 
+    index += 1
+end 
+
+# FOR LOOPS
+animals = ["Bear", "Dog", "Cat", "Whale"]
+
+# First way
+for animal in animals
+    puts animal
+end 
+
+# Second way
+animals.each do |animal|
+    puts animal
+end 
+
+# Third way
+for index in 0..5
+    puts index
+end 
+
+# Fourth way 
+6.times do |index|
+    puts index
+end 
+
+# READING FILES
+# First parameter is the path of the file
+# Second parameter is the open mode, there are around 7 different modes 
+file = File.open("employees.txt", "r") 
+# Read the whole file
+puts file.read()
+# Don't let the file open in memory 
+file.close()
+
+# Other reading methods 
+# Read each line file.readline() 
+# Read each character file.readchar() 
+# Return an array with each line file.readlines() 
+
+# WRITING FILES 
+# Open file in append mode to add information at the end of the file
+File.open("employees.txt", "a") do |file|
+    file.write("\nOscar, Accounting")
+end 
+
+# w overwrites a file or create a new one 
+File.open("index.html", "w") do |file|
+    file.write("<h1>Hello</h1>")
+end 
+
+# With r+ mode we can read and write the file 
+File.open("employees.txt", "r+") do |file|
+    file.readline() # Starts the cursor at the second line
+    file.write("Hi") # Overrides 
+end 
+
+# HANDLING ERRORS 
+lucky_nums = [1,2,3]
+
+begin
+    # Put any code you think could throw an error or exception 
+    num = 10 / 0
+    lucky_nums["dog"]
+rescue ZeroDivisionError # it's a good idea to specify the error
+    puts "Division by zero error"
+rescue TypeError => e # Capture the error into a variable
+    puts e 
+end
