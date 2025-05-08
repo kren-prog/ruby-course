@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Examples of Loops that we can use in Ruby
 module LoopExamples
   module_function
 

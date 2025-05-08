@@ -1,29 +1,35 @@
+# frozen_string_literal: true
+
 # Calculator module
 module Calculator
   module_function
 
   def basic
-    puts "Enter a number: "
+    puts 'Enter a number: '
     num1 = gets.chomp.to_f
-    puts "Enter another number: "
+    puts 'Enter another number: '
     num2 = gets.chomp.to_f
     puts num1 + num2
   end
 
   def advanced
-    puts "Enter first number: "
+    puts 'Enter first number: '
     num1 = gets.chomp.to_f
-    puts "Enter operator: "
+    puts 'Enter operator: '
     op = gets.chomp
-    puts "Enter second number: "
+    puts 'Enter second number: '
     num2 = gets.chomp.to_f
 
-    result = case op
-             when "+" then num1 + num2
-             when "-" then num1 - num2
-             when "*" then num1 * num2
-             when "/" then num1 / num2
-             else "Invalid operator"
+    operate(op, num1, num2)
+  end
+
+  def operate(opt, num1, num2)
+    result = case opt
+             when '+' then num1 + num2
+             when '-' then num1 - num2
+             when '*' then num1 * num2
+             when '/' then num1 / num2
+             else 'Invalid operator'
              end
 
     puts result
