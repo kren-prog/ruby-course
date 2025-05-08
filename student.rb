@@ -25,4 +25,4 @@ student1 = Student.new("Jim", "Business", 2.6)
 student2 = Student.new("Pam", "Art", 3.6)
 
 # say hi to a student 
-Tools.sayhi(student1.name)    
+Tools.sayhi(student1.name)
