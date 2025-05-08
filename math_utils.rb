@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Math utility module
 module MathUtils
   def self.describe_number(num)

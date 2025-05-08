@@ -1,10 +1,12 @@
-# This class is needed for quiz 
-class Question
-    attr_accessor :prompt, :answer 
+# frozen_string_literal: true
 
-    def initialize(prompt, answer)
-        @prompt = prompt
-        
-        @answer = answer
-    end 
+# This class is needed for quiz
+class Question
+  attr_accessor :prompt, :answer
+
+  def initialize(prompt, answer)
+    @prompt = prompt
+
+    @answer = answer
+  end
 end
